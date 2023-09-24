@@ -12,7 +12,6 @@
 
 ## To remove execute 'docker compose -p reportportal down'
 ##
-
 version: '3.8'
 services:
 

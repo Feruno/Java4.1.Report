@@ -23,7 +23,6 @@ repositories {
     mavenCentral()
 }
 
-
 dependencies {
     testImplementation 'org.junit.jupiter:junit-jupiter:5.9.2'
     implementation group: 'com.codeborne', name: 'selenide', version: '6.17.0'
