@@ -28,16 +28,21 @@ dependencies {
     implementation group: 'com.codeborne', name: 'selenide', version: '6.17.0'
     implementation 'com.github.javafaker:javafaker:1.0.2'
 
-    implementation group: 'com.epam.reportportal', name: 'client-java', version: '5.1.22'
+    //implementation group: 'com.epam.reportportal', name: 'client-java', version: '5.1.22'
+    //testImplementation 'com.epam.reportportal:agent-java-junit5:5.1.10'
 
-    testImplementation 'com.epam.reportportal:agent-java-junit5:5.1.10'
+    implementation 'com.epam.reportportal:agent-java-junit5:5.0.0'
+    implementation 'com.epam.reportportal:logger-java-logback:5.0.2'
+    implementation 'ch.qos.logback:logback-classic:1.2.3'
+    implementation 'com.epam.reportportal:logger-java-log4j:5.0.2'
 
     implementation group: 'io.qameta.allure', name: 'allure-selenide', version: '2.21.0'
 }
 
 test {
+    testLogging.showStandardStreams = true
     useJUnitPlatform()
     systemProperty 'selenide.headless', System.getProperty('selenide.headless')
-
+    systemProperty 'selenide.browser', 'chrome'
     systemProperty 'junit.jupiter.extensions.autodetection.enabled', true
 }
