@@ -1,11 +1,13 @@
 package ru.netology;
 
 import com.codeborne.selenide.logevents.SelenideLogger;
+import com.epam.reportportal.junit5.ReportPortalExtension;
 import io.qameta.allure.selenide.AllureSelenide;
 import org.junit.jupiter.api.AfterAll;
 import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
+import org.junit.jupiter.api.extension.ExtendWith;
 import org.openqa.selenium.Keys;
 
 import java.time.Duration;
@@ -32,6 +34,7 @@ public class AppCardDeliveryPatterns {
     }
 
     @Test
+    @ExtendWith(ReportPortalExtension.class)
     void appSuccessfulPath() {
 
         DataGenerator.userInfo valUser = DataGenerator.Regist.generetUser("ru");
