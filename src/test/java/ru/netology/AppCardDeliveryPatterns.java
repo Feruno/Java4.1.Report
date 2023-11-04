@@ -17,6 +17,7 @@ import static com.codeborne.selenide.Selectors.byText;
 import static com.codeborne.selenide.Selectors.withText;
 import static com.codeborne.selenide.Selenide.*;
 
+@ExtendWith(ReportPortalExtension.class)
 public class AppCardDeliveryPatterns {
 
     @BeforeAll
@@ -34,7 +35,6 @@ public class AppCardDeliveryPatterns {
     }
 
     @Test
-    @ExtendWith(ReportPortalExtension.class)
     void appSuccessfulPath() {
 
         DataGenerator.userInfo valUser = DataGenerator.Regist.generetUser("ru");

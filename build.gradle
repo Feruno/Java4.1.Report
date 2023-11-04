@@ -21,6 +21,11 @@ allure{
 repositories {
     mavenLocal()
     mavenCentral()
+    jcenter()
+    maven {
+        url "http://dl.bintray.com/epam/reportportal"
+        allowInsecureProtocol = true
+    }
 }
 
 dependencies {
